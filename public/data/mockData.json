@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "title": "제대로 파는 React",
+      "contents": "React 를 기초부터 배웁니다. 강의를 완강할 때 쯤이면 고급 React 개발자로 거듭나 있을 것입니다."
+    },
+    {
+      "id": 2,
+      "title": "기초부터 배우는 HTML",
+      "contents": "정적 HTML로 포트폴리오 사이트 만들기"
+    },
+    {
+      "id": 3,
+      "title": "기초부터 배우는 CSS",
+      "contents": "CSS로 포트폴리오 사이트 만들기"
+    },
+    {
+      "id": 4,
+      "title": "기초부터 배우는 JavaScript",
+      "contents": "기초부터 시작하여 JS 전문가 수준까지 담은 최신 JavaScript 강의! 한 강의로 해결하는 JavaScript 웹 개발 완벽 가이드."
+    },
+    {
+      "id": 5,
+      "title": "기초부터 배우는 Typescript",
+      "contents": "Typescript의 개념과 컴파일러 작동 방식, ES6 문법, JavaScript를 Typescript에 통합, Webpack으로 개발 환경 설정, 실제 사례를 배웁니다"
+    },
+    {
+      "id": 6,
+      "title": "기초부터 배우는 NextJS",
+      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+    }
+  ]
+}
