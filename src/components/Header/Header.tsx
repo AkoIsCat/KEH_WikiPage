@@ -1,9 +1,16 @@
 import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const onClickTitle = () => {
+    navigate('/');
+  };
+
   return (
     <HeaderStyle>
-      <Title>WIKI Page</Title>
+      <Title onClick={onClickTitle}>WIKI Page</Title>
     </HeaderStyle>
   );
 };
@@ -16,8 +23,8 @@ const HeaderStyle = styled.header`
 `;
 
 const Title = styled.div`
-  width: 100%;
   padding: 20px;
   font-size: 50px;
   color: black;
+  cursor: pointer;
 `;
