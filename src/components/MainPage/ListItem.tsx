@@ -9,7 +9,7 @@ const ListItem = ({ id, title, contents }: ListItemProps) => {
   return (
     <Item
       id={`${id}`}
-      onClick={() => navigate(`/${id}`, { state: { title, contents } })}
+      onClick={() => navigate(`/${id}`, { state: { title, contents, id } })}
     >
       {title}
     </Item>
