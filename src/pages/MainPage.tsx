@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import { getWikiData } from 'api/axios';
+import { useState } from 'react';
 
 import Header from 'components/Header/Header';
 import ListItem from 'components/MainPage/ListItem';
@@ -11,22 +10,11 @@ import LoadingSpinner from 'components/UI/LoadingSpinner';
 import Button from 'components/UI/Button';
 import Portal from 'components/Modal/Portal';
 import Modal from 'components/Modal/Modal';
-import { DataProps } from 'types/types';
+import { DataProps, AddDataProps } from 'types/types';
 
-const MainPage = () => {
-  const [data, setData] = useState<DataProps[]>([]);
+const MainPage = ({ addPost, data }: AddDataProps) => {
   const [page, setPage] = useState(1);
   const [modalOn, setModalOn] = useState(false);
-
-  useEffect(() => {
-    const getData = async () => {
-      const response = await getWikiData();
-      const data = await response?.data.data;
-      setData(data);
-    };
-
-    getData();
-  }, []);
 
   if (!data) {
     return <LoadingSpinner />;
@@ -42,11 +30,6 @@ const MainPage = () => {
 
   const modalHandler = () => {
     setModalOn((prev) => !prev);
-  };
-
-  const addPost = (addData: DataProps[]) => {
-    const newData: DataProps[] = [...data, ...addData];
-    setData(newData);
   };
 
   return (
@@ -70,7 +53,7 @@ const MainPage = () => {
             contents={item.contents}
           />
         ))}
-        <Button title={'추가'} onClick={modalHandler} />
+        <Button title={'추가'} onClick={modalHandler} type='button' />
         <Paging
           pageChangeHandler={pageChangeHandler}
           page={page}
