@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 import MainPage from 'pages/MainPage';
 import DetailPage from 'pages/DetailPage';
+import ModifyPage from 'pages/ModifyPage';
 
 function App() {
   const queryClient = new QueryClient();
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/:id" element={<DetailPage />} />
+        <Route path="/:id/modify" element={<ModifyPage />} />
       </Routes>
     </QueryClientProvider>
   );
