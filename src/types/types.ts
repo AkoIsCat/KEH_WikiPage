@@ -23,6 +23,7 @@ export interface ChildrenProps {
 export interface ButtonProps {
   title: string;
   onClick?: () => void;
+  type: 'submit' | 'button' | 'reset' | undefined;
 }
 
 // data 타입
@@ -37,4 +38,15 @@ export interface ModalProps {
   onClose: () => void;
   onClickSubmit: (data: DataProps[]) => void;
   idNumber: number;
+}
+
+// MainPage 컴포넌트 props 타입
+export interface AddDataProps {
+  addPost: (data: DataProps[]) => void;
+  data: DataProps[];
+}
+
+// Modify 컴포넌트 props 타입
+export interface ModifyDataProps {
+  modifyPost: (data: DataProps[]) => void;
 }
