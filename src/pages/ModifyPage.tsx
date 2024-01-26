@@ -1,26 +1,41 @@
 import styled from 'styled-components';
 import React, { useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Background from 'components/UI/Background';
 import ContentsWrap from 'components/UI/ContentsWrap';
 import Button from 'components/UI/Button';
+import Header from 'components/Header/Header';
+import { ModifyDataProps, DataProps } from 'types/types';
 
-const ModifyPage = () => {
+const ModifyPage = ({ modifyPost }: ModifyDataProps) => {
   const { state } = useLocation();
+  const navigate = useNavigate();
 
   const titleRef = useRef<HTMLInputElement>(null);
   const contentsRef = useRef<HTMLTextAreaElement>(null);
 
   const onSubmitForm = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log(titleRef.current?.value);
-    console.log(contentsRef.current?.value);
+    const data: DataProps[] = [
+      {
+        id: state.id,
+        title: titleRef.current?.value as string,
+        contents: contentsRef.current?.value as string,
+      },
+    ];
+    modifyPost(data);
+    navigate('/');
   };
-  console.log(state);
+
+  const onClickList = () => {
+    navigate('/');
+  };
+
   return (
     <Background>
       <ContentsWrap>
+        <Header />
         <Form onSubmit={onSubmitForm}>
           <Input
             placeholder="제목을 입력해 주세요."
@@ -33,8 +48,8 @@ const ModifyPage = () => {
             defaultValue={state.contents}
           />
           <ButtonWrap>
-            <Button title="목록" />
-            <Button title="등록" />
+            <Button title="목록" onClick={onClickList} type="button" />
+            <Button title="등록" type="submit" />
           </ButtonWrap>
         </Form>
       </ContentsWrap>
