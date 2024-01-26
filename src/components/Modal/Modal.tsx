@@ -34,7 +34,7 @@ const Modal = ({ onClose, onClickSubmit, idNumber }: ModalProps) => {
 
   return (
     <Background>
-      <ContentWrap>
+      <ContentsWrap>
         <Close>
           <p onClick={onClose}>X</p>
         </Close>
@@ -45,7 +45,7 @@ const Modal = ({ onClose, onClickSubmit, idNumber }: ModalProps) => {
             <Button title="등록" />
           </ButtonWrap>
         </Form>
-      </ContentWrap>
+      </ContentsWrap>
     </Background>
   );
 };
@@ -76,7 +76,7 @@ const Background = styled.div`
   z-index: 100;
 `;
 
-const ContentWrap = styled.div`
+const ContentsWrap = styled.div`
   width: 800px;
   background: #fff;
   margin: 20px 0;

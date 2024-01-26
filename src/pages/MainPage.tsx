@@ -5,7 +5,7 @@ import Header from 'components/Header/Header';
 import ListItem from 'components/MainPage/ListItem';
 import Paging from 'components/MainPage/Paging';
 import Background from 'components/UI/Background';
-import ContentWrap from 'components/UI/ContentsWrap';
+import ContentsWrap from 'components/UI/ContentsWrap';
 
 import LoadingSpinner from 'components/UI/LoadingSpinner';
 import Button from 'components/UI/Button';
@@ -51,7 +51,7 @@ const MainPage = () => {
 
   return (
     <Background>
-      <ContentWrap>
+      <ContentsWrap>
         <Header />
         {modalOn && (
           <Portal>
@@ -76,7 +76,7 @@ const MainPage = () => {
           page={page}
           totalItemCount={data.length}
         />
-      </ContentWrap>
+      </ContentsWrap>
     </Background>
   );
 };

@@ -5,13 +5,13 @@ interface Props {
   children: ReactNode;
 }
 
-const ContentWrap = ({ children }: Props) => {
-  return <ContentWrapStyle>{children}</ContentWrapStyle>;
+const ContentsWrap = ({ children }: Props) => {
+  return <ContentsWrapStyle>{children}</ContentsWrapStyle>;
 };
 
-export default ContentWrap;
+export default ContentsWrap;
 
-const ContentWrapStyle = styled.div`
+const ContentsWrapStyle = styled.div`
   width: 70vw;
   display: flex;
   flex-direction: column;
