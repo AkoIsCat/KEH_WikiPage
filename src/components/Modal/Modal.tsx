@@ -42,7 +42,7 @@ const Modal = ({ onClose, onClickSubmit, idNumber }: ModalProps) => {
           <Input placeholder="제목을 입력해 주세요." ref={titleRef} />
           <Textarea placeholder="내용을 입력해 주세요." ref={contentsRef} />
           <ButtonWrap>
-            <Button title="등록" />
+            <Button title="등록" type="submit" />
           </ButtonWrap>
         </Form>
       </ContentsWrap>

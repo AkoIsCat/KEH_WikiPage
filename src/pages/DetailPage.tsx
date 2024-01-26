@@ -4,11 +4,11 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import Background from 'components/UI/Background';
 import ContentsWrap from 'components/UI/ContentsWrap';
 import Button from 'components/UI/Button';
+import Header from 'components/Header/Header';
 
 const DetailPage = () => {
   const { state } = useLocation();
   const navigate = useNavigate();
-  console.log(state);
 
   const onClickList = () => {
     navigate('/');
@@ -21,11 +21,12 @@ const DetailPage = () => {
   return (
     <Background>
       <ContentsWrap>
+        <Header />
         <Title>{state.title}</Title>
         <Contents>{state.contents}</Contents>
         <ButtonWrap>
-          <Button title="목록" onClick={onClickList} />
-          <Button title="수정" onClick={onClickModify} />
+          <Button title="목록" onClick={onClickList} type="button" />
+          <Button title="수정" onClick={onClickModify} type="submit" />
         </ButtonWrap>
       </ContentsWrap>
     </Background>
