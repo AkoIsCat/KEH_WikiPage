@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import { ButtonProps } from 'types/types';
 
-const Button = ({ title, onClick }: ButtonProps) => {
-  return <ButtonStyle onClick={onClick}>{title}</ButtonStyle>;
+const Button = ({ title, onClick, type }: ButtonProps) => {
+  return <ButtonStyle type={type} onClick={onClick}>{title}</ButtonStyle>;
 };
 
 export default Button;
