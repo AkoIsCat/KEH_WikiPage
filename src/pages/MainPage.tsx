@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
 import { getWikiData } from 'api/axios';
 
 import Header from 'components/Header/Header';
@@ -8,36 +7,62 @@ import Paging from 'components/MainPage/Paging';
 import Background from 'components/UI/Background';
 import ContentWrap from 'components/UI/ContentsWrap';
 
-import { ListItemProps } from 'types/types';
 import LoadingSpinner from 'components/UI/LoadingSpinner';
+import Button from 'components/UI/Button';
+import Portal from 'components/Modal/Portal';
+import Modal from 'components/Modal/Modal';
+import { DataProps } from 'types/types';
 
 const MainPage = () => {
+  const [data, setData] = useState<DataProps[]>([]);
   const [page, setPage] = useState(1);
+  const [modalOn, setModalOn] = useState(false);
 
-  const { data: wikiData, isLoading: wikiDataIsLoading } = useQuery({
-    queryKey: ['list'],
-    queryFn: getWikiData,
-    select: (data) => data?.data.data,
-  });
+  useEffect(() => {
+    const getData = async () => {
+      const response = await getWikiData();
+      const data = await response?.data.data;
+      setData(data);
+    };
 
-  if (wikiDataIsLoading) {
+    getData();
+  }, []);
+
+  if (!data) {
     return <LoadingSpinner />;
   }
 
-  const startIndex: number = (page - 1) * 5;
-  const endIndex: number = startIndex + 5;
-  const currentPost: [] = wikiData.slice(startIndex, endIndex);
-  console.log(currentPost);
+  const startIndex = (page - 1) * 5;
+  const endIndex = startIndex + 5;
+  const currentPost = data.slice(startIndex, endIndex);
 
   const pageChangeHandler = (page: number) => {
     setPage(page);
+  };
+
+  const modalHandler = () => {
+    setModalOn((prev) => !prev);
+  };
+
+  const addPost = (addData: DataProps[]) => {
+    const newData: DataProps[] = [...data, ...addData];
+    setData(newData);
   };
 
   return (
     <Background>
       <ContentWrap>
         <Header />
-        {currentPost.map((item: ListItemProps) => (
+        {modalOn && (
+          <Portal>
+            <Modal
+              onClose={modalHandler}
+              onClickSubmit={addPost}
+              idNumber={data.length}
+            />
+          </Portal>
+        )}
+        {currentPost.map((item: DataProps) => (
           <ListItem
             key={item.id}
             id={item.id}
@@ -45,10 +70,11 @@ const MainPage = () => {
             contents={item.contents}
           />
         ))}
+        <Button title={'추가'} onClick={modalHandler} />
         <Paging
           pageChangeHandler={pageChangeHandler}
           page={page}
-          totalItemCount={wikiData.length}
+          totalItemCount={data.length}
         />
       </ContentWrap>
     </Background>
