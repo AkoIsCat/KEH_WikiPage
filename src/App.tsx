@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { DataProps } from 'types/types';
 import { getWikiData } from 'api/axios';
 
@@ -10,7 +9,6 @@ import ModifyPage from 'pages/ModifyPage';
 
 function App() {
   const [data, setData] = useState<DataProps[]>([]);
-  const queryClient = new QueryClient();
 
   useEffect(() => {
     const getData = async () => {
@@ -42,7 +40,6 @@ function App() {
   };
 
   return (
-    <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<MainPage addPost={addPost} data={data} />} />
         <Route path="/:id" element={<DetailPage data={data} />} />
@@ -51,7 +48,6 @@ function App() {
           element={<ModifyPage modifyPost={modifyPost} />}
         />
       </Routes>
-    </QueryClientProvider>
   );
 }
 
