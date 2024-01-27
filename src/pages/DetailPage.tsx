@@ -39,11 +39,15 @@ const DetailPage = ({ data }: DetailProps) => {
         <Header />
         <Title>{currentData.title}</Title>
         <Contents>
-          {AutoLinkingContent({
-            contents: currentData.contents,
-            titles: titleArray,
-            allData: data,
-          })}
+          {currentData.contents.split('\n').map((item, index) => (
+            <div key={index}>
+              {AutoLinkingContent({
+                contents: item,
+                titles: titleArray,
+                allData: data,
+              })}
+            </div>
+          ))}
         </Contents>
         <ButtonWrap>
           <Button title="목록" onClick={onClickList} type="button" />
