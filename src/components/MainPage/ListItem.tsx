@@ -26,7 +26,7 @@ const Item = styled.div`
   display: flex;
   font-size: 20px;
   align-items: center;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 5px;
   border: 1px solid #cdd2ed;
   cursor: pointer;
