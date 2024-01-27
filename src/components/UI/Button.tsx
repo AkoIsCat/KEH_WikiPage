@@ -2,7 +2,11 @@ import styled from 'styled-components';
 import { ButtonProps } from 'types/types';
 
 const Button = ({ title, onClick, type }: ButtonProps) => {
-  return <ButtonStyle type={type} onClick={onClick}>{title}</ButtonStyle>;
+  return (
+    <ButtonStyle type={type} onClick={onClick}>
+      {title}
+    </ButtonStyle>
+  );
 };
 
 export default Button;
@@ -12,7 +16,7 @@ const ButtonStyle = styled.button`
   height: 40px;
   border-radius: 5px;
   border: 0;
-  margin: 5px;
+  margin: 10px;
   outline: none;
   background: #ccd0e7;
   cursor: pointer;
