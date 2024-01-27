@@ -5,6 +5,7 @@ export interface ListItemProps {
   id: number;
   title: string;
   contents: string;
+  allData: DataProps[];
 }
 
 // paging 컴포넌트 타입
@@ -46,7 +47,19 @@ export interface AddDataProps {
   data: DataProps[];
 }
 
+// DetailPage 컴포넌트 props 타입
+export interface DetailProps {
+  data: DataProps[];
+}
+
 // Modify 컴포넌트 props 타입
 export interface ModifyDataProps {
   modifyPost: (data: DataProps[]) => void;
+}
+
+// util함수 props 타입
+export interface AutoLinkingProps {
+  contents: string;
+  titles: string[];
+  allData: DataProps[];
 }
