@@ -13,7 +13,7 @@ export default Button;
 
 const ButtonStyle = styled.button`
   width: 7%;
-  height: 40px;
+  height: 50px;
   border-radius: 5px;
   border: 0;
   margin: 10px;
