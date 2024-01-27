@@ -51,6 +51,7 @@ const MainPage = ({ addPost, data }: AddDataProps) => {
             id={item.id}
             title={item.title}
             contents={item.contents}
+            allData={data}
           />
         ))}
         <Button title={'추가'} onClick={modalHandler} type='button' />
