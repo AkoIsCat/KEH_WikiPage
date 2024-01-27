@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import Button from 'components/UI/Button';
 import { DataProps, ModalProps } from 'types/types';
 
-const Modal = ({ onClose, onClickSubmit, idNumber }: ModalProps) => {
+const Modal = ({ onClose, onClickSubmit, idNumber, titles }: ModalProps) => {
   const titleRef = useRef<HTMLInputElement>(null);
   const contentsRef = useRef<HTMLTextAreaElement>(null);
 
@@ -11,8 +11,14 @@ const Modal = ({ onClose, onClickSubmit, idNumber }: ModalProps) => {
     e.preventDefault();
     const titleIsValid = (titleRef.current?.value.length as number) >= 1;
     const contentsIsValid = (contentsRef.current?.value.length as number) >= 1;
+    const titleIsUnique = !titles.includes(titleRef.current?.value as string);
+
     if (!titleIsValid) {
       alert('제목을 입력해주세요.');
+      return;
+    }
+    if (!titleIsUnique) {
+      alert('이미 존재하는 제목입니다.');
       return;
     }
     if (!contentsIsValid) {
