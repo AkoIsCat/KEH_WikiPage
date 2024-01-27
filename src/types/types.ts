@@ -39,6 +39,7 @@ export interface ModalProps {
   onClose: () => void;
   onClickSubmit: (data: DataProps[]) => void;
   idNumber: number;
+  titles: string[];
 }
 
 // MainPage 컴포넌트 props 타입
