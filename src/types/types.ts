@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { RefObject } from 'react';
 
 // 공통 타입
 export interface ListItemProps {
@@ -63,4 +64,15 @@ export interface AutoLinkingProps {
   contents: string;
   titles: string[];
   allData: DataProps[];
+}
+
+// form props 타입
+export interface FormProps {
+  onSubmitForm: (e: React.FormEvent) => void;
+  titleRef: RefObject<HTMLInputElement>;
+  contentsRef: RefObject<HTMLTextAreaElement>;
+  type: string;
+  onClickList?: () => void;
+  titleValue?: string;
+  contentsValue?: string;
 }
