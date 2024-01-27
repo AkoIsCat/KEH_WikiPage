@@ -2,68 +2,68 @@
   "data": [
     {
       "id": 1,
-      "title": "제대로 파는 React",
-      "contents": "React 를 기초부터 배웁니다. 강의를 완강할 때 쯤이면 고급 React 개발자로 거듭나 있을 것입니다."
+      "title": "JavaScript",
+      "contents": "Ecma International의 프로토타입 기반의 프로그래밍 언어로, 스크립트 언어에 해당된다. 특수한 목적이 아닌 이상 모든 웹 브라우저에 인터프리터가 내장되어 있다."
     },
     {
       "id": 2,
-      "title": "기초부터 배우는 HTML",
-      "contents": "정적 HTML로 포트폴리오 사이트 만들기"
+      "title": "CommonJS",
+      "contents": "JavaScript의 발전과 함께 이 언어를 서버 사이트 스크립팅 등 다양한 환경에서 사용하고자 하는 움직임이 일어났으며, 그 시초가 바로 CommonJS다. CommonJS는 다양한 API 규격으로 이루어져 있는데, 대표적인 것이 모듈 스펙이다. 당시 ECMAScript 표준에 모듈 스펙이 없었기 때문에, CommonJS의 모듈 스펙은 상당한 파급력을 가졌다."
     },
     {
       "id": 3,
-      "title": "기초부터 배우는 CSS",
-      "contents": "CSS로 포트폴리오 사이트 만들기"
+      "title": "jQuery",
+      "contents": "DOM Manipulating 라이브러리. 사실상 JavaScript 개발에 필수였던 라이브러리였으나 리액트, 앵귤러 등의 프레임워크의 생산성이 워낙 높다 보니 2010년대 후반부터는 사실상 레거시가 되었으며 아주 간단한 웹사이트에서만 쓰이고 안쓰는 추세다. 기본적으로 document.querySelectorAll('oooo')를 $('oooo')로 쓸 수 있는 등의 기능이 있다."
     },
     {
       "id": 4,
-      "title": "기초부터 배우는 JavaScript",
-      "contents": "기초부터 시작하여 JS 전문가 수준까지 담은 최신 JavaScript 강의! 한 강의로 해결하는 JavaScript 웹 개발 완벽 가이드."
+      "title": "AngularJS",
+      "contents": "구글에서 제작한 프론트엔드용 클라이언트 사이드 JavaScript 프레임워크. Angular 1으로도 불린다. 백엔드, 프론트엔드를 동시에 작업 할 수 있다. MongoDB, Express, AngularJS, Node.js를 함께 사용하여 MEAN Stack으로 많이 사용한다. Angular 2 이후로는 이건 TypeScript를 이용한다. 기본적으로 많은 기능들이 내재되어 있다."
     },
     {
       "id": 5,
-      "title": "기초부터 배우는 Typescript",
-      "contents": "Typescript의 개념과 컴파일러 작동 방식, ES6 문법, JavaScript를 Typescript에 통합, Webpack으로 개발 환경 설정, 실제 사례를 배웁니다"
+      "title": "React",
+      "contents": "Facebook에서 만든 프론트엔드용 오픈소스 라이브러리다.[35] 단방향 데이터 흐름과, Virtual DOM 개념을 도입한 UI 컴포넌트 라이브러리. 생산성이 높고, DOM 업데이트에 있어서 성능이 매우 빨라 동적인 웹 애플리케이션 구성에 유리하다. 그리고 이러한 동적 웹이 모던 웹 애플리케이션의 필수 요소가 되어버린만큼 출시 이후 꾸준히 점유율을 늘려가며 업계 표준 라이브러리 중 하나로 자리잡았다. 최근에는 React Hooks이라 불리는 메소드가 지원되면서 생산성이 더 좋아졌다. html로 뷰를 작성해야하는 Angular와는 다르게 JSX라는 문법을 지원하면서 JavaScript만으로 애플리케이션을 작성하는게 가능하다."
     },
     {
       "id": 6,
-      "title": "기초부터 배우는 NextJS",
-      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+      "title": "Vue.js",
+      "contents": "중국계 미국인 에반 유가 만든 사용자 인터페이스를 만들기 위한 프론트엔드용 프레임워크이다. 굉장히 자유롭고 유연하게 추가 기능들을 불러올 수 있다는 특징이 있으나 추가 기능들을 무분별하게 사용하는 경우 안정성을 떨어뜨릴 수 있다."
     },
     {
       "id": 7,
-      "title": "기초부터 배우는 NextJS",
-      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+      "title": "Node.js",
+      "contents": "브라우저 안에서만 작동하던 JavaScript를 브라우저 외의 환경에서 작동할 수 있게 만들어 준 런타임 환경이다."
     },
     {
       "id": 8,
-      "title": "기초부터 배우는 NextJS",
-      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+      "title": "Express.js",
+      "contents": "Node.js 환경을 기반으로 만들어진 웹 애플리케이션 프레임워크. 주로 JavaScript로 백엔드를 개발할 때 사용된다."
     },
     {
       "id": 9,
-      "title": "기초부터 배우는 NextJS",
-      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+      "title": "TypeScript",
+      "contents": "마이크로소프트에서 발표한 JavaScript에 정적 타입 개념을 추가한 신형 언어. CoffeeScript와 마찬가지로 컴파일 결과는 JavaScript이다. 약타입 언어인 JavaScript 타입 시스템의 구멍을 메우기 위해 나왔다. 그렇게 강타입 언어가 된 TypeScript는 코드의 견고함을 강점으로 내세우고 있다. 현재는 Angular 2 이후에서 이 언어를 채택하면서 많이 사용되기 시작했다. ECMAScript 2015 표준도 구현되어 있으며 순수한 JavaScript와 문법적인 차이가 적다. 마이크로소프트에서 만들었다보니 마이크로소프트 편집기인 Visual Studio Code에서 변수 타입이나 오류에 관한 피드백을 즉각즉각 해 주어서 버그 방지에 유용하다."
     },
     {
       "id": 10,
-      "title": "기초부터 배우는 NextJS",
-      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+      "title": "Deno",
+      "contents": "Node.js의 개발자 Ryan Dahl이 Node.js의 아쉬운점을 개선한 JavaScript 런타임 환경이다."
     },
     {
       "id": 11,
-      "title": "기초부터 배우는 NextJS",
-      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+      "title": "Svelte",
+      "contents": "Rich Harris가 2016년도 출시한 오픈소스 프론트엔드 웹 프레임워크이다."
     },
     {
       "id": 12,
-      "title": "기초부터 배우는 NextJS",
-      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+      "title": "Electron",
+      "contents": "GitHub에서 만든 HTML+CSS+Javascript 데스크톱 앱 프레임워크."
     },
     {
       "id": 13,
-      "title": "기초부터 배우는 NextJS",
-      "contents": "NextJS를 기초부터 배우고, 프로덕션 준비가 완료된 풀스택 ReactJS 앱을 NextJS 프레임워크를 통해 구축해 보세요!"
+      "title": "npm",
+      "contents": "Node Package Manager"
     }
   ]
 }
