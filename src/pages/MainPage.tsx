@@ -24,6 +24,8 @@ const MainPage = ({ addPost, data }: AddDataProps) => {
   const endIndex = startIndex + 5;
   const currentPost = data.slice(startIndex, endIndex);
 
+  const titleArray = data.map((item: DataProps) => item.title);
+
   const pageChangeHandler = (page: number) => {
     setPage(page);
   };
@@ -42,6 +44,7 @@ const MainPage = ({ addPost, data }: AddDataProps) => {
               onClose={modalHandler}
               onClickSubmit={addPost}
               idNumber={data.length}
+              titles={titleArray}
             />
           </Portal>
         )}
