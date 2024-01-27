@@ -45,7 +45,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Routes>
         <Route path="/" element={<MainPage addPost={addPost} data={data} />} />
-        <Route path="/:id" element={<DetailPage />} />
+        <Route path="/:id" element={<DetailPage data={data} />} />
         <Route
           path="/:id/modify"
           element={<ModifyPage modifyPost={modifyPost} />}
