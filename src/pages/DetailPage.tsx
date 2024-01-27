@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import Background from 'components/UI/Background';
@@ -37,8 +36,10 @@ const DetailPage = ({ data }: DetailProps) => {
     <Background>
       <ContentsWrap>
         <Header />
-        <Title>{currentData.title}</Title>
-        <Contents>
+        <div className="text-4xl	font-bold	my-2.5	mx-5	pb-5	border-b-4	border-solid border-btncolor">
+          {currentData.title}
+        </div>
+        <div className="h-textHeight m-5">
           {currentData.contents.split('\n').map((item, index) => (
             <div key={index}>
               {AutoLinkingContent({
@@ -48,33 +49,14 @@ const DetailPage = ({ data }: DetailProps) => {
               })}
             </div>
           ))}
-        </Contents>
-        <ButtonWrap>
+        </div>
+        <div className="flex justify-center">
           <Button title="목록" onClick={onClickList} type="button" />
           <Button title="수정" onClick={onClickModify} type="submit" />
-        </ButtonWrap>
+        </div>
       </ContentsWrap>
     </Background>
   );
 };
 
 export default DetailPage;
-
-const Title = styled.div`
-  font-size: 40px;
-  font-weight: bold;
-  margin: 10px 20px;
-  padding-bottom: 20px;
-  border-bottom: 3px solid #ccd0e7;
-`;
-
-const Contents = styled.div`
-  height: 300px;
-  margin: 20px;
-`;
-
-const ButtonWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 0 20px;
-`;

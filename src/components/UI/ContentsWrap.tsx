@@ -1,21 +1,11 @@
-import { ReactNode } from 'react';
-import styled from 'styled-components';
+import { ChildrenProps } from 'types/types';
 
-interface Props {
-  children: ReactNode;
-}
-
-const ContentsWrap = ({ children }: Props) => {
-  return <ContentsWrapStyle>{children}</ContentsWrapStyle>;
+const ContentsWrap = ({ children }: ChildrenProps) => {
+  return (
+    <div className="w-contents flex justify-center flex-col	bg-white">
+      {children}
+    </div>
+  );
 };
 
 export default ContentsWrap;
-
-const ContentsWrapStyle = styled.div`
-  width: 70vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #ffffff;
-  font-family: Noto Sans KR;
-`;

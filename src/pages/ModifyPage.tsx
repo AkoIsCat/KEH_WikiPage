@@ -1,11 +1,10 @@
-import styled from 'styled-components';
 import React, { useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 import Background from 'components/UI/Background';
 import ContentsWrap from 'components/UI/ContentsWrap';
-import Button from 'components/UI/Button';
 import Header from 'components/Header/Header';
+import Form from 'components/UI/Form';
 import { ModifyDataProps, DataProps } from 'types/types';
 
 const ModifyPage = ({ modifyPost }: ModifyDataProps) => {
@@ -42,61 +41,18 @@ const ModifyPage = ({ modifyPost }: ModifyDataProps) => {
     <Background>
       <ContentsWrap>
         <Header />
-        <Form onSubmit={onSubmitForm}>
-          <Input
-            placeholder="제목을 입력해 주세요."
-            ref={titleRef}
-            defaultValue={state.title}
-          />
-          <Textarea
-            placeholder="내용을 입력해 주세요."
-            ref={contentsRef}
-            defaultValue={state.contents}
-          />
-          <ButtonWrap>
-            <Button title="목록" onClick={onClickList} type="button" />
-            <Button title="등록" type="submit" />
-          </ButtonWrap>
-        </Form>
+        <Form
+          type="modify"
+          onSubmitForm={onSubmitForm}
+          titleRef={titleRef}
+          contentsRef={contentsRef}
+          onClickList={onClickList}
+          titleValue={state.title}
+          contentsValue={state.contents}
+        />
       </ContentsWrap>
     </Background>
   );
 };
 
 export default ModifyPage;
-
-const Form = styled.form`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-`;
-
-const Input = styled.input`
-  height: 50px;
-  font-size: 25px;
-  outline: none;
-  margin: 20px 20px;
-  padding: 0 10px;
-  background: #fff;
-  color: #000;
-  border: 1px solid #cdd2ed;
-  border-radius: 10px;
-`;
-
-const Textarea = styled.textarea`
-  height: 300px;
-  margin: 20px 20px;
-  padding: 10px;
-  font-size: 20px;
-  outline: none;
-  background: #fff;
-  color: #000;
-  border: 1px solid #cdd2ed;
-  border-radius: 10px;
-`;
-
-const ButtonWrap = styled.div`
-  display: flex;
-  justify-content: center;
-  margin: 0 20px;
-`;

@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
@@ -9,22 +8,15 @@ const Header = () => {
   };
 
   return (
-    <HeaderStyle>
-      <Title onClick={onClickTitle}>WiKi Page</Title>
-    </HeaderStyle>
+    <header className="h-headerHeight flex">
+      <div
+        onClick={onClickTitle}
+        className="p-5 text-title text-black	cursor-pointer	"
+      >
+        WiKi Page
+      </div>
+    </header>
   );
 };
 
 export default Header;
-
-const HeaderStyle = styled.header`
-  height: 12vh;
-  display: flex;
-`;
-
-const Title = styled.div`
-  padding: 20px;
-  font-size: 50px;
-  color: black;
-  cursor: pointer;
-`;

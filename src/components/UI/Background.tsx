@@ -1,19 +1,11 @@
-import { ReactNode } from 'react';
-import styled from 'styled-components';
+import { ChildrenProps } from 'types/types';
 
-interface Props {
-  children: ReactNode;
-}
-
-const Background = ({ children }: Props) => {
-  return <BackBox>{children}</BackBox>;
+const Background = ({ children }: ChildrenProps) => {
+  return (
+    <div className="bg-backgroundColor flex justify-center min-h-screen">
+      {children}
+    </div>
+  );
 };
 
 export default Background;
-
-const BackBox = styled.div`
-  background: #edeef3;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-`;

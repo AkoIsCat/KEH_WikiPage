@@ -27,7 +27,7 @@ const AutoLinkingContent = ({
 
       // title을 Link 컴포넌트로 렌더링
       elements.push(
-        <Link to={`/${findId.id}`} key={title}>
+        <Link to={`/${findId.id}`} key={title} className="text-sky-600">
           {title}
         </Link>
       );
