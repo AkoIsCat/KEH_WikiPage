@@ -29,7 +29,13 @@ const ModifyPage = ({ modifyPost }: ModifyDataProps) => {
   };
 
   const onClickList = () => {
-    navigate('/');
+    if (
+      window.confirm('작성중이던 내용이 사라집니다. 정말 이동하시겠습니까?')
+    ) {
+      navigate('/');
+    } else {
+      return;
+    }
   };
 
   return (
