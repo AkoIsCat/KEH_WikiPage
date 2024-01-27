@@ -3,13 +3,15 @@ import { useNavigate } from 'react-router-dom';
 
 import { ListItemProps } from 'types/types';
 
-const ListItem = ({ id, title, contents }: ListItemProps) => {
+const ListItem = ({ id, title, contents, allData }: ListItemProps) => {
   const navigate = useNavigate();
 
   return (
     <Item
       id={`${id}`}
-      onClick={() => navigate(`/${id}`, { state: { title, contents, id } })}
+      onClick={() =>
+        navigate(`/${id}`, { state: { title, contents, id, allData } })
+      }
     >
       {title}
     </Item>
