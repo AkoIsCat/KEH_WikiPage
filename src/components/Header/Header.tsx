@@ -10,7 +10,7 @@ const Header = () => {
 
   return (
     <HeaderStyle>
-      <Title onClick={onClickTitle}>WIKI Page</Title>
+      <Title onClick={onClickTitle}>WiKi Page</Title>
     </HeaderStyle>
   );
 };
