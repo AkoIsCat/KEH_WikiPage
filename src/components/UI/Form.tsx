@@ -15,16 +15,18 @@ const Form = ({
       <input
         placeholder="제목을 입력해 주세요."
         ref={titleRef}
+        id="title"
         defaultValue={type === 'modify' ? titleValue : ''}
         className="h-myHeight text-2xl m-5 px-2.5 bg-white text-black	rounded-myRadius border border-solid border-borderColor outline-none"
       />
       <textarea
         placeholder="내용을 입력해 주세요."
         ref={contentsRef}
+        id="contents"
         defaultValue={type === 'modify' ? contentsValue : ''}
-        className='h-textHeight m-5 p-2.5 bg-white text-black rounded-myRadius border border-solid border-borderColor outline-none'
+        className="h-textHeight m-5 p-2.5 bg-white text-black rounded-myRadius border border-solid border-borderColor outline-none"
       />
-      <div className='flex justify-center	mr-5 mb-5'>
+      <div className="flex justify-center	mr-5 mb-5">
         {type === 'modify' && (
           <Button title="목록" onClick={onClickList} type="button" />
         )}
@@ -35,4 +37,3 @@ const Form = ({
 };
 
 export default Form;
-
