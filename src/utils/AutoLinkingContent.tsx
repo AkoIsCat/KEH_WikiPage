@@ -15,7 +15,7 @@ const AutoLinkingContent = ({
     const indexOfTitle = contents.indexOf(title, currentIndex);
 
     if (indexOfTitle !== -1) {
-      // title 이전의 부분을 p 태그로 렌더링
+      // title 이전의 부분을 span 태그로 렌더링
       if (currentIndex < indexOfTitle) {
         const textBeforeTitle = contents.slice(currentIndex, indexOfTitle);
         elements.push(<span key={textBeforeTitle}>{textBeforeTitle}</span>);
@@ -37,7 +37,7 @@ const AutoLinkingContent = ({
     }
   }
 
-  // title 이후의 부분을 p 태그로 렌더링
+  // title 이후의 부분을 span 태그로 렌더링
   if (currentIndex < contents.length) {
     const textAfterTitles = contents.slice(currentIndex);
     elements.push(<span key={textAfterTitles}>{textAfterTitles}</span>);
