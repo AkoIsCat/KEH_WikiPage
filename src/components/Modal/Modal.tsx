@@ -40,7 +40,7 @@ const Modal = ({ onClose, onClickSubmit, idNumber, titles }: ModalProps) => {
   return (
     <div className="fixed	h-full overflow-auto top-0 right-0 left-0 bottom-0 z-50 bg-modalBGColor">
       <div className="w-modalW bg-white my-5 rounded-myRadius absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 overflow-auto shadow-modal">
-        <div className="mx-5	text-3xl flex justify-end	 ">
+        <div className="mx-5 text-3xl flex justify-end">
           <p onClick={onClose} className="cursor-pointer my-close p-0">
             X
           </p>

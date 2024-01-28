@@ -11,7 +11,7 @@ const Header = () => {
     <header className="h-headerHeight flex">
       <div
         onClick={onClickTitle}
-        className="p-5 text-title text-black	cursor-pointer	"
+        className="p-5 text-title text-black cursor-pointer"
       >
         WiKi Page
       </div>
