@@ -17,12 +17,11 @@ const DetailPage = ({ data }: DetailProps) => {
   }
 
   const currentData = data[+id - 1];
+  const titleArray = data.map((item: DataProps) => item.title);
 
   const onClickList = () => {
     navigate('/');
   };
-
-  const titleArray = data.map((item: DataProps) => item.title);
 
   const onClickModify = () => {
     navigate(`/${currentData.id}/modify`, { state: currentData });
@@ -36,7 +35,7 @@ const DetailPage = ({ data }: DetailProps) => {
     <Background>
       <ContentsWrap>
         <Header />
-        <div className="text-4xl	font-bold	my-2.5	mx-5	pb-5	border-b-4	border-solid border-btncolor">
+        <div className="text-4xl font-bold my-2.5 mx-5 pb-5 border-b-4 border-solid border-btncolor">
           {currentData.title}
         </div>
         <div className="h-textHeight m-5">
